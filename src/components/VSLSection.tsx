@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import VideoPlayer from "./VideoPlayer";
 
 export default function VSLSection() {
   return (
@@ -28,12 +27,14 @@ export default function VSLSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
+          className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl"
         >
-          <VideoPlayer
-            src="/videos/vsl.mp4"
-            autoplayMuted={true}
-            loop={true}
-            className="w-full aspect-video shadow-2xl"
+          <iframe
+            src="https://www.youtube.com/embed/CI68YDCkJ10?autoplay=1&mute=1&loop=1&playlist=CI68YDCkJ10&controls=0&showinfo=0&rel=0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            frameBorder="0"
+            style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0 }}
           />
         </motion.div>
       </div>

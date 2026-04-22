@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import VideoPlayer from "./VideoPlayer";
 
 export default function TestimonialsVideo() {
   return (
@@ -29,11 +28,15 @@ export default function TestimonialsVideo() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="bg-white rounded-3xl shadow-xl overflow-hidden p-2 max-w-[400px] mx-auto"
         >
-          <VideoPlayer
-            src="/videos/testimonials.mp4"
-            autoplayMuted={false}
-            className="w-full aspect-[9/16] rounded-2xl"
-          />
+          <div className="relative w-full aspect-[9/16] rounded-2xl overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/iF9aKYZfH1A?rel=0&showinfo=0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+              frameBorder="0"
+              style={{ width: "100%", height: "100%", position: "absolute", top: 0, left: 0 }}
+            />
+          </div>
           <p className="text-center text-sm text-gray-500 py-4 px-4">
             Hear from leaders who&apos;ve been through the program
           </p>
